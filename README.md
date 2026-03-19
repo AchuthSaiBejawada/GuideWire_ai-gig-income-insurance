@@ -1,130 +1,208 @@
-AI-Powered Parametric Insurance for Gig Workers
-Problem
-Gig delivery workers (Swiggy/Zomato) lose income due to external disruptions like heavy rain, pollution, extreme heat, and curfews. These events reduce their working hours, causing financial instability. Currently, they have no income protection.
+# GuideWire_ai-gig-income-insurance
 
-Persona
-Name: Rahul
-Platform: Swiggy
-City: Hyderabad
-Average Daily Income: ₹700
 
-we came up with a Solution
+*AI-powered parametric insurance platform for gig workers using dynamic risk-based premium calculation 
+(premium = base + risk_score × factor) and income-based payouts (7-day average model).*
 
-THE SOLUTION -
+
+## AI-Powered Parametric Insurance for Gig Workers
+
+
+
+### Problem
+
+
+
+*Gig delivery workers (Swiggy/Zomato) lose income due to external disruptions like heavy rain, pollution, extreme heat, and curfews. These events reduce their working hours, causing financial instability. Currently, they have no income protection.*
+
+
+
+
+### PERSONA
+
+
+
+ ### Name: Rahul
+
+### Platform: Swiggy
+
+### City: Hyderabad
+
+### Average Daily Income: ₹700
+
+*we came up with a Solution*
+
+# THE SOLUTION -
 We build an AI-powered parametric insurance platform that automatically compensates workers when external disruptions reduce their ability to work.
 
-Weekly Premium Model (With Formula)
 
-Premium is calculated using AI risk scoring:
+## Weekly Premium Model (With Formula)
 
-premium = base_price + (risk_score × risk_factor)
-Where:
+*Premium is calculated using AI risk scoring:*
+
+### premium = base_price + (risk_score × risk_factor)
+
+**Where:**
+
 base_price = ₹20
+
 risk_score = 0 to 1
+
 risk_factor = ₹20
-Example:
+
+**Example:**
 premium = 20 + (0.5 × 20) = ₹30/week
+
 Income-Based Payout (Key Feature)
 
-****We use a rolling 7-day average income model ****
-Daily Avg income = Last 7 days income / 7
+**We use a rolling 7-day average income model**
 
-Example:
+## Daily Avg income = Last 7 days income / 7
+
+**Example:**
+
 4900 / 7 = ₹700
 
-Payout Formula:
-payout = daily_avg_income × disruption_factor
+## Payout Formula:
 
-Example:
+### payout = daily_avg_income × disruption_factor
+
+
+**Example:**
+
 700 × 0.6 = ₹420
+
 Parametric Triggers
+
 Claims are triggered automatically:
 
-THE CONDITIONS FOR CLAIM
-Rainfall > 50mm
-Temperature > 45°C
-AQI > 350
-Curfew / zone closure
+# THE CONDITIONS FOR CLAIM
 
-Workflow
-Worker registers
 
-AI calculates risk score & premium
+**Rainfall > 50mm**
 
-Worker buys policy
+**Temperature > 45°C**
 
-System monitors weather
+**AQI > 350**
 
-Disruption detected
+**Curfew / zone closure**
 
-Fraud checks applied
 
-Claim triggered automatically
+# Workflow
 
-Payout simulated
 
-AI Integration
-Risk Prediction
+1.Worker registers
 
-Calculates risk score
+2.AI calculates risk score & premium
 
-Adjusts premium
+3.Worker buys policy
 
-Fraud Detection
+4.System monitors weather
 
-Weather validation
+5.Disruption detected
 
-Location verification
+6.Fraud checks applied
 
-Activity analysis
+7.Claim triggered automatically
 
-Adversarial Defense & Anti-Spoofing Strategy
-##To handle fraud attacks like GPS spoofing:
+8.Payout simulated
 
-1.Multi-Source Location Check
-GPS + IP + historical patterns
-2.Activity Validation
-{ IF orders_delivered > threshold }
+## AI Integration
+
+
+1.Risk Prediction
+
+2.Calculates risk score
+
+3.Adjusts premium
+
+4.Fraud Detection
+
+5.Weather validation
+
+6.Location verification
+
+7.Activity analysis
+
+
+# Adversarial Defense & Anti-Spoofing Strategy
+
+## To handle fraud attacks like GPS spoofing:
+
+## 1.Multi-Source Location Check
+
+ *GPS + IP + historical patterns*
+
+## 2.Activity Validation
+
+*{ IF orders_delivered > threshold }*
+
+
 → no payout
 
-3.External Data Verification
+
+## 3.External Data Verification
+
 Weather API
+
 Pollution API
 
-4.Fraud Scoring
-fraud_score = f(location_mismatch, activity_drop, claim_frequency)
 
-5.Anti-Collusion Detection
+## 4.Fraud Scoring
+
+
+*### fraud_score = f(location_mismatch, activity_drop, claim_frequency)*
+
+
+## 5.Anti-Collusion Detection
+
+
 Multiple users from same location
+
 Pattern-based fraud detection
 
-System Architecture
-Worker → Frontend → Backend API → AI Engine
+
+# System Architecture
+
+Worker  →   Frontend   →   Backend API   →   AI Engine
+
 ↓
+
 Weather API + Database
+
 ↓
+
 Claim + Payout System
 
-Tech Stack
-Frontend:
+
+# Tech Stack
+
+## Frontend:
+
 HTML, CSS, JavaScript
 
-Backend:
-Spring Boot
+## Backend:
 
-AI:
+Spring Boot,Node.js
+
+## AI:
+
 Python (Scikit-learn)
 
-Database:
+## Database:
+
 PostgreSQL
 
-APIs:
+## APIs:
+
 Weather API
 
-Payments:
+## Payments:
+
 Razorpay (Test Mode)
 
-Future Enhancements
+# Future Enhancements
+
 • Risk heatmap
 
 • Advanced ML models
