@@ -1,8 +1,4 @@
-# GuideWire_ai-gig-income-insurance
-AI-powered parametric insurance platform for gig workers using dynamic risk-based premium calculation (premium = base + risk_score × factor) and income-based payouts (7-day average model).
-
 AI-Powered Parametric Insurance for Gig Workers
-
 Problem
 Gig delivery workers (Swiggy/Zomato) lose income due to external disruptions like heavy rain, pollution, extreme heat, and curfews. These events reduce their working hours, causing financial instability. Currently, they have no income protection.
 
@@ -14,8 +10,7 @@ Average Daily Income: ₹700
 
 we came up with a Solution
 
-THE SOLUTION - 
-
+THE SOLUTION -
 We build an AI-powered parametric insurance platform that automatically compensates workers when external disruptions reduce their ability to work.
 
 Weekly Premium Model (With Formula)
@@ -25,17 +20,18 @@ Premium is calculated using AI risk scoring:
 premium = base_price + (risk_score × risk_factor)
 Where:
 base_price = ₹20
-risk_score = 0 to 1 
+risk_score = 0 to 1
 risk_factor = ₹20
 Example:
 premium = 20 + (0.5 × 20) = ₹30/week
 Income-Based Payout (Key Feature)
 
 ****We use a rolling 7-day average income model ****
+Daily Avg income = Last 7 days income / 7
 
-daily_avg_income = total_income_last_7_days / 7
 Example:
 4900 / 7 = ₹700
+
 Payout Formula:
 payout = daily_avg_income × disruption_factor
 
@@ -45,89 +41,71 @@ Parametric Triggers
 Claims are triggered automatically:
 
 THE CONDITIONS FOR CLAIM
-
 Rainfall > 50mm
 Temperature > 45°C
 AQI > 350
 Curfew / zone closure
 
-
 Workflow
+Worker registers
 
+AI calculates risk score & premium
 
+Worker buys policy
 
-	Worker registers
+System monitors weather
 
-	AI calculates risk score & premium
+Disruption detected
 
-	Worker buys policy
+Fraud checks applied
 
-	System monitors weather
+Claim triggered automatically
 
-	Disruption detected
+Payout simulated
 
-	Fraud checks applied
+AI Integration
+Risk Prediction
 
-	Claim triggered automatically
+Calculates risk score
 
-	Payout simulated
+Adjusts premium
 
-	AI Integration
+Fraud Detection
 
-	Risk Prediction
+Weather validation
 
-	Calculates risk score
+Location verification
 
-	Adjusts premium
+Activity analysis
 
-	Fraud Detection
-
-	Weather validation
-
-	Location verification
-
-	Activity analysis
-
- Adversarial Defense & Anti-Spoofing Strategy
-
-To handle fraud attacks like GPS spoofing:
+Adversarial Defense & Anti-Spoofing Strategy
+##To handle fraud attacks like GPS spoofing:
 
 1.Multi-Source Location Check
-
 GPS + IP + historical patterns
-
-2. Activity Validation
-
+2.Activity Validation
 { IF orders_delivered > threshold }
 → no payout
 
-3. External Data Verification
+3.External Data Verification
 Weather API
 Pollution API
 
-4. Fraud Scoring
+4.Fraud Scoring
 fraud_score = f(location_mismatch, activity_drop, claim_frequency)
 
-5. Anti-Collusion Detection
-
+5.Anti-Collusion Detection
 Multiple users from same location
 Pattern-based fraud detection
 
-
-
-
-
- System Architecture
- 
+System Architecture
 Worker → Frontend → Backend API → AI Engine
-                          ↓
-            Weather API + Database
-                          ↓
-                Claim + Payout System
+↓
+Weather API + Database
+↓
+Claim + Payout System
 
-
-Tech Stack we are going to use
-
+Tech Stack
 Frontend:
 HTML, CSS, JavaScript
 
@@ -146,13 +124,11 @@ Weather API
 Payments:
 Razorpay (Test Mode)
 
-
 Future Enhancements
+• Risk heatmap
 
-•	Risk heatmap
+• Advanced ML models
 
-•	Advanced ML models
+• Real-time payouts
 
-•	Real-time payouts
-
-•	Personalized plans
+• Personalized plans
